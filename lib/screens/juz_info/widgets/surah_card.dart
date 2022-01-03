@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SurahCard extends StatelessWidget {
   const SurahCard({
@@ -22,11 +23,11 @@ class SurahCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Surah: $surah",
+                "${AppLocalizations.of(context)!.surah}: $surah",
                 style: const TextStyle(color: Colors.white),
               ),
               Text(
-                "Ayahs: $ayahs",
+                "${AppLocalizations.of(context)!.ayahs}: $ayahs",
                 style: const TextStyle(color: Colors.white),
               )
             ],

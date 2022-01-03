@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:quran_helper/models/juz.dart';
 import 'package:quran_helper/screens/juz_info/juz_info.dart';
 
@@ -26,9 +27,11 @@ class JuzCard extends StatelessWidget {
             ),
           );
         },
-        title: const Text(
-          'Juz',
-          textAlign: TextAlign.center,
+        title: FittedBox(
+          child: Text(
+            AppLocalizations.of(context)!.juz,
+            textAlign: TextAlign.center,
+          ),
         ),
         subtitle: Text(
           juz.juzNumber.toString(),
