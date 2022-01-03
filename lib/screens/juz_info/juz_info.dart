@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quran_helper/models/juz.dart';
 import 'package:quran_helper/screens/juz_info/widgets/surah_card.dart';
 import 'package:quran_helper/screens/juz_info/widgets/surahs_grid.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class JuzInfo extends StatelessWidget {
   const JuzInfo({Key? key, required this.juz}) : super(key: key);
@@ -23,7 +24,7 @@ class JuzInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Juz ${juz.juzNumber}"),
+        title: Text("${AppLocalizations.of(context)!.juz} ${juz.juzNumber}"),
       ),
       body: ListView(
         children: [
@@ -36,7 +37,7 @@ class JuzInfo extends StatelessWidget {
                   const SizedBox(height: 10.0),
                   RichText(
                     text: TextSpan(
-                      text: 'Verses count:  ',
+                      text: "${AppLocalizations.of(context)!.versesCount}:  ",
                       style: const TextStyle(color: Colors.black),
                       children: <TextSpan>[
                         TextSpan(
